@@ -1,0 +1,40 @@
+.checkout{
+    display: flex;
+    background-color: #fff;
+    height: max-content;
+    padding: 20px;    
+}
+.checkout_left{
+    width: 70%;
+}
+.checkout_banner{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.title{
+    border-bottom: 1px solid lightgray;
+    text-transform: capitalize;
+}
+.checkout_right{
+    width: 30%;
+}
+
+
+.checkout_product{
+    display: flex;
+    padding: 20px;
+    margin: 5px;
+    border-bottom: 1px solid lightgray;
+}
+.checkout_image{
+    width: 150px;
+    max-height: 150px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+.checkout_rating{
+    display: flex;
+}
+.checkout_price, .checkout_title{
+    font-size: 20px;
+}
