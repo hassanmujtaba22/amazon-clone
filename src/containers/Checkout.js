@@ -7,7 +7,8 @@ function Checkout() {
     const [{ basket }] = useStateValue()
 
     console.log(basket);
-
+    
+    
     return (
         <div className="checkout">
             <div className="checkout_left">

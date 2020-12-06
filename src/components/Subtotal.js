@@ -5,6 +5,10 @@ import {useStateValue} from "../context/StateProvider"
 
 function Subtotal() {
     const [{ basket }] = useStateValue()
+
+    const calculateTotal = (basket) => {
+        return basket.reduce((price, item) => item.price + price, 0)
+    }
     return (
         <div className="subtotal">
             <CurrencyFormat className="subtotal_Card"
@@ -14,7 +18,7 @@ function Subtotal() {
                 prefix={'$'}
                 renderText={(value) => <div>
                     <p className="subtotal_price">
-                        Subtotal ({basket.length} item): <strong>{`${value}`}</strong>
+                        Subtotal ({basket.length} item): <strong>{`${calculateTotal(basket)}`}</strong>
                     </p>
                     <small className="subtotal_gift">
                         <input type="checkbox" />This order contains a gift
